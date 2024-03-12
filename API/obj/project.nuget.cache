@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "hjmNbbCx37G+YgzJNS9EXXJW205+p1EgL8SaCtT6x6x3tlsXp7Z1HHWUYc/CpYkq84Ri+rK5dkAYXxh331aZZQ==",
+  "success": true,
+  "projectFilePath": "/Users/ziyangh/Desktop/technet/API/API.csproj",
+  "expectedPackageFiles": [
+    "/Users/ziyangh/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/ziyangh/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/ziyangh/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/Users/ziyangh/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "/Users/ziyangh/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "/Users/ziyangh/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
