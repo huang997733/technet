@@ -1,5 +1,4 @@
 ﻿using Core;
-using Infrastucture;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure;
