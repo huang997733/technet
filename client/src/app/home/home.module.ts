@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ShopRoutingModule } from './shop-routing.module';
+import { HomeComponent } from './home.component';
 
 
 
@@ -8,7 +8,8 @@ import { ShopRoutingModule } from './shop-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    ShopRoutingModule
-  ]
+    HomeComponent
+  ],
+  exports: [HomeComponent]
 })
-export class ShopModule { }
+export class HomeModule { }
