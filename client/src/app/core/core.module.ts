@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SectionHeaderComponent } from './section-header/section-header.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -8,10 +10,14 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   declarations: [],
   imports: [
     CommonModule,
-    NavBarComponent
+    NavBarComponent,
+    SectionHeaderComponent,
+    NgxSpinnerModule
   ],
   exports: [
-    NavBarComponent
+    NavBarComponent,
+    SectionHeaderComponent,
+    NgxSpinnerModule
   ]
 })
 export class CoreModule { }
