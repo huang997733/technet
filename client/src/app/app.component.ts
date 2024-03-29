@@ -4,6 +4,7 @@ import { NavBarComponent } from "./core/nav-bar/nav-bar.component";
 import { NgFor } from '@angular/common';
 import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
+import { BasketService } from './basket/basket.service';
 
 @Component({
     selector: 'app-root',
@@ -15,10 +16,13 @@ import { HomeComponent } from './home/home.component';
 export class AppComponent implements OnInit{
   title = 'TechNet';
 
-  constructor() {
+  constructor(private basketService: BasketService) {
   }
 
   ngOnInit(): void {
-    
+    const basketId = localStorage.getItem('basket_id');
+    if (basketId) {
+      this.basketService.getBasket(basketId);
+    }
   }
 }
