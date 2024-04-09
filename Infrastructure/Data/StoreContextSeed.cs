@@ -30,6 +30,13 @@ public class StoreContextSeed
 
         }
 
+        if (!context.DeliveryMethods.Any())
+        {
+            var dmData = File.ReadAllText("../Infrastructure/Data/SeedData/delivery.json");
+            var methods = JsonSerializer.Deserialize<List<DeliveryMethod>>(dmData);
+            context.DeliveryMethods.AddRange(methods);
+        }
+
         if (context.ChangeTracker.HasChanges()) await context.SaveChangesAsync();
     }
 }
