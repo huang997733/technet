@@ -89,6 +89,7 @@ public class AccountController : BaseApiController
         return await _userManager.FindByEmailAsync(email) != null;
     }
 
+    [Authorize]
     [HttpGet("address")]
     public async Task<ActionResult<AddressDto>> GetUserAddress()
     {

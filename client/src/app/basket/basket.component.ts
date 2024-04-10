@@ -8,7 +8,7 @@ import { BasketItem } from '../shared/models/basket';
 @Component({
   selector: 'app-basket',
   standalone: true,
-  imports: [CommonModule, RouterModule, SharedModule],
+  imports: [CommonModule, RouterModule, SharedModule, SharedModule],
   templateUrl: './basket.component.html',
   styleUrl: './basket.component.scss'
 })
@@ -20,8 +20,8 @@ export class BasketComponent {
     this.basketService.addItemToBasket(item);
   }
 
-  removeItem(id: number, quantity: number) {
-    this.basketService.removeItemFromBasket(id, quantity);
+  removeItem(event: {id: number, quantity: number}) {
+    this.basketService.removeItemFromBasket(event.id, event.quantity);
   }
   
 }
