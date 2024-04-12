@@ -13,7 +13,7 @@ public static class ApplicationServicesExtensions
         services.AddSingleton<IResponseCacheService, ResponseCacheService>();
         services.AddDbContext<StoreContext>(opt =>
         {
-            opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
+            opt.UseNpgsql(config.GetConnectionString("DefaultConnection"));
         });
         services.AddSingleton<IConnectionMultiplexer>(c =>
         {

@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.Reflection;
+using System.Text.Json;
 using Core;
 
 namespace Infrastructure;
@@ -7,16 +8,17 @@ public class StoreContextSeed
 {
     public static async Task SeedAsync(StoreContext context)
     {
+        var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         if (!context.ProductBrands.Any())
         {
-            var brandsData = File.ReadAllText("../Infrastructure/Data/SeedData/brands.json");
+            var brandsData = File.ReadAllText(path + @"/Data/SeedData/brands.json");
             var brands = JsonSerializer.Deserialize<List<ProductBrand>>(brandsData);
             context.ProductBrands.AddRange(brands);
         }
 
         if (!context.ProductTypes.Any())
         {
-            var typesData = File.ReadAllText("../Infrastructure/Data/SeedData/types.json");
+            var typesData = File.ReadAllText(path + @"/Data/SeedData/types.json");
             var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
             context.ProductTypes.AddRange(types);
 
@@ -24,7 +26,7 @@ public class StoreContextSeed
 
         if (!context.Products.Any())
         {
-            var productsData = File.ReadAllText("../Infrastructure/Data/SeedData/products.json");
+            var productsData = File.ReadAllText(path + @"/Data/SeedData/products.json");
             var products = JsonSerializer.Deserialize<List<Product>>(productsData);
             context.Products.AddRange(products);
 
@@ -32,7 +34,7 @@ public class StoreContextSeed
 
         if (!context.DeliveryMethods.Any())
         {
-            var dmData = File.ReadAllText("../Infrastructure/Data/SeedData/delivery.json");
+            var dmData = File.ReadAllText(path + @"/Data/SeedData/delivery.json");
             var methods = JsonSerializer.Deserialize<List<DeliveryMethod>>(dmData);
             context.DeliveryMethods.AddRange(methods);
         }
